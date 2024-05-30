@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Inventory Prediction</title>
+</head>
+<body>
+    <h1>Inventory Prediction</h1>
+    <ul>
+        {% for item in prediction %}
+            <li>{{ item.item_name }} - Predicted Quantity: {{ item.predicted_quantity }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Inventory</a>
+</body>
+</html>
